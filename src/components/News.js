@@ -10,7 +10,8 @@ export class News extends Component {
         console.log("constructor calling");
         this.state={
             articles: [],
-            loading: false
+            loading: false,
+            page: 1
         }
 
     }
@@ -19,7 +20,37 @@ export class News extends Component {
     let url = "https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=afddc95fd23d41fe881016e9454a94a5"
     let data = await fetch(url); //to fetch the data from URL
     let parseData = await data.json()
-    this.setState({articles: parseData.articles})
+    this.setState({articles: parseData.articles, totalResults: parseData.totalResults})
+  }
+
+  handlePreviousClick = async () =>{
+
+    let url = `https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=afddc95fd23d41fe881016e9454a94a5&page=${this.state.page - 1}&pageSize=20`
+    let data = await fetch(url); //to fetch the data from URL
+    let parseData = await data.json()
+
+    this.setState({
+      page: this.state.page - 1,
+      articles: parseData.articles
+    })
+
+  }
+  handleNextClick = async () =>{
+
+    if(this.state.page + 1 > Math.ceil(this.state.totalResults/20)){
+
+    }
+    else
+    {
+      let url = `https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=afddc95fd23d41fe881016e9454a94a5&page=${this.state.page + 1}&pageSize=20`
+      let data = await fetch(url); //to fetch the data from URL
+      let parseData = await data.json()
+
+      this.setState({
+        page: this.state.page + 1,
+        articles: parseData.articles
+      })
+    }
   }
 
   render() {
@@ -35,6 +66,10 @@ export class News extends Component {
           </div>
         })}
             
+        </div>
+        <div className='container d-flex justify-content-between'>
+        <button disabled={this.state.page<=1} type="button" class="btn btn-dark" onClick={this.handlePreviousClick} >&larr; Previous</button>
+        <button type="button" class="btn btn-dark"onClick={this.handleNextClick} >Next &rarr;</button>
         </div>
       </div>
     )
