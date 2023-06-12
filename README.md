@@ -1,42 +1,68 @@
-React Project Setup Guide
-This guide provides step-by-step instructions for setting up an existing React project on your local machine. By following these instructions, you'll be able to run the project locally and make any necessary modifications or contributions.
 
-Prerequisites
-Before you begin, ensure that you have the following prerequisites installed on your machine:
+# Project Title
 
-Node.js (version 12 or higher)
-npm (Node Package Manager)
-Installation Steps
-Clone the repository: Start by cloning the project repository to your local machine using the following command:
+News Monkey is a sleek and intuitive news app built using React, offering users a seamless experience for staying updated with the latest news and headlines from around the world.
 
-shell
-Copy code
-git clone https://github.com/sundaram-sharma/newsapp.git
+With its modern and user-friendly interface, News Monkey allows users to browse news articles, explore various categories, and personalize their news feed according to their interests.
 
-Navigate to the project directory: Change your current directory to the project folder using the cd command:
 
-shell
-Copy code
-cd <project-directory>
-Replace <project-directory> with the name of the project folder.
+## Features
 
-Install project dependencies: Use npm to install the project dependencies specified in the package.json file:
+- Personalized News Feed: Tailor your news feed based on your preferences and interests, ensuring you stay informed about the topics that matter to you the most.
 
-shell
-Copy code
-npm install
-Configuration: Some projects require additional configuration before they can run correctly. Check if there are any specific configuration steps mentioned in the project's documentation or README file. Follow those steps, if applicable.
+- Categories and Search: Easily explore news articles across different categories, such as business, sports, entertainment, technology, and more. Utilize the search functionality to find specific articles or topics of interest.
 
-Start the development server: After installing the dependencies, you can start the development server with the following command:
+- Trending News: Stay up-to-date with the latest trends and popular stories that are making headlines worldwide.
 
-shell
-Copy code
-npm start
-Access the application: Once the development server starts successfully, you can access the application by opening a web browser and navigating to http://localhost:3000 (or a different port if specified by the project).
+- Bookmark and Save: Save articles for later reading or bookmark your favorite articles to easily access them anytime.
 
-Congratulations! You have successfully set up the existing React project on your local machine. You can now explore and make changes to the project code as needed.
+- User-Friendly Interface: Enjoy a visually appealing and intuitive interface that makes navigating through news articles a breeze.
 
-Additional Resources
-If you encounter any issues during the setup process, refer to the project's documentation or the "Issues" section of the repository for troubleshooting steps.
-For more information on working with React, refer to the official React documentation: React Documentation
-Happy coding!
+## Installation
+
+1.) First clone the project from github in your desired location. Open the VScode and do the following:
+
+```bash
+ $ git clone https://github.com/sundaram-sharma/newsapp.git 
+```
+
+2.) After cloning the project. Head to the directory:
+```bash
+ $ cd <the location where you saved the file>
+ ```
+
+3.) You can also open vscode new windows by just typing code:
+```bash
+ code . 
+```
+
+4.) Install project dependencies:
+
+```bash
+ npm install 
+```
+
+5.) Check your react-script dependency is avaliable or not in package.json. If not available then add it manually via:
+
+```bash
+ npm install react-scripts --save
+```
+
+5.) After this, Start the development server:
+
+```bash
+ npm start
+```
+6.) Access the application by opening a web browser and navigating to http://localhost:3000.
+
+
+
+    
+## Screenshots
+
+Screenshot 1
+![App Screenshot](https://i.ibb.co/q0gB7JV/news-monkey1.png)
+
+Screenshot 2
+![App Screenshot](https://i.ibb.co/8xWR53S/news-monkey.png)
+
