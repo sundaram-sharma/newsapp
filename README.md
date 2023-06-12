@@ -60,9 +60,13 @@ With its modern and user-friendly interface, News Monkey allows users to browse 
     
 ## Screenshots
 
+
 Screenshot 1
+
 ![App Screenshot](https://i.ibb.co/q0gB7JV/news-monkey1.png)
 
+
 Screenshot 2
+
 ![App Screenshot](https://i.ibb.co/8xWR53S/news-monkey.png)
 
